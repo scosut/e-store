@@ -1,0 +1,22 @@
+.table {
+    font-size: 16px;
+
+    th, 
+    td {
+        padding: 5px;
+    }
+
+    thead th {
+        border-bottom: none;
+        font-size: 14px;
+    }
+
+    tfoot td {
+        border: none;
+    }
+
+    .table-link {
+        color: $color-accent;
+        text-decoration: underline;
+    }
+}

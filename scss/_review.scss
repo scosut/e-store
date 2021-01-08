@@ -1,0 +1,78 @@
+.review-0,
+.review-0-5,
+.review-1,
+.review-1-5,
+.review-2,
+.review-2-5,
+.review-3,
+.review-3-5,
+.review-4,
+.review-4-5,
+.review-5 {
+    font-size: 16px;
+    margin: 10px 0;
+    position: relative;
+}
+
+.review-0:before,
+.review-0-5:before,
+.review-1:before,
+.review-1-5:before,
+.review-2:before,
+.review-2-5:before,
+.review-3:before,
+.review-3-5:before,
+.review-4:before,
+.review-4-5:before,
+.review-5:before {
+    color: $color-accent;
+    font-family: "FontAwesome";
+    left: 0;
+    letter-spacing: -1px;
+    padding-right: 10px;
+    top: 0;    
+}
+
+.review-0:before {
+    content: "\f006\00A0\f006\00A0\f006\00A0\f006\00A0\f006";
+}
+
+.review-0-5:before {
+    content: "\f123\00A0\f006\00A0\f006\00A0\f006\00A0\f006";
+}
+
+.review-1:before {
+    content: "\f005\00A0\f006\00A0\f006\00A0\f006\00A0\f006";
+}
+
+.review-1-5:before {
+    content: "\f005\00A0\f123\00A0\f006\00A0\f006\00A0\f006";
+}
+
+.review-2:before {
+    content: "\f005\00A0\f005\00A0\f006\00A0\f006\00A0\f006";
+}
+
+.review-2-5:before {
+    content: "\f005\00A0\f005\00A0\f123\00A0\f006\00A0\f006";
+}
+
+.review-3:before {
+    content: "\f005\00A0\f005\00A0\f005\00A0\f006\00A0\f006";
+}
+
+.review-3-5:before {
+    content: "\f005\00A0\f005\00A0\f005\00A0\f123\00A0\f006";
+}
+
+.review-4:before {
+    content: "\f005\00A0\f005\00A0\f005\00A0\f005\00A0\f006";
+}
+
+.review-4-5:before {
+    content: "\f005\00A0\f005\00A0\f005\00A0\f005\00A0\f123";
+}
+
+.review-5:before {
+    content: "\f005\00A0\f005\00A0\f005\00A0\f005\00A0\f005";
+}

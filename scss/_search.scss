@@ -1,0 +1,8 @@
+.input-group-search {
+    max-width: 225px;
+
+    input[type=search]:focus {
+        border-color: $color-accent;
+        box-shadow: 0 0 0 0.2rem rgba($color-accent, .5);
+    }
+}

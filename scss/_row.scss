@@ -1,0 +1,8 @@
+.row-product {
+    > div {
+        @include atXS() {
+            margin: auto;
+            max-width: 400px;
+        }
+    }
+}

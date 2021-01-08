@@ -1,0 +1,13 @@
+.bg-breadcrumb {
+    background-color: $color-bg;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+}
+
+.breadcrumb-item {
+    a {
+        color: $color-accent;
+    }
+}

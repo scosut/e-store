@@ -1,0 +1,37 @@
+{
+  "name": "estore",
+  "version": "1.0.0",
+  "description": "This is a web application for the fictional e-commerce site E-Store.",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "clean": "rimraf dist",
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
+    "lite": "lite-server",
+    "scss": "node-sass scss/styles.scss --output-style expanded > css/styles.css",
+    "start": "npm run watch:all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "usemin": "usemin cart.html -d dist --htmlmin -o dist/cart.html && usemin form_product.html -d dist --htmlmin -o dist/form_product.html && usemin index.html -d dist --htmlmin -o dist/index.html && usemin order.html -d dist --htmlmin -o dist/order.html && usemin orders.html -d dist --htmlmin -o dist/orders.html && usemin payment.html -d dist --htmlmin -o dist/payment.html && usemin product.html -d dist --htmlmin -o dist/product.html && usemin products.html -d dist --htmlmin -o dist/products.html && usemin profile.html -d dist --htmlmin -o dist/profile.html && usemin register.html -d dist --htmlmin -o dist/register.html && usemin search.html -d dist --htmlmin -o dist/search.html && usemin shipping.html -d dist --htmlmin -o dist/shipping.html && usemin sign_in.html -d dist --htmlmin -o dist/sign_in.html",
+    "watch:scss": "onchange \"scss/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\""
+  },
+  "author": "Scott Sutton",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.2.0",
+    "imagemin-cli": "^5.1.0",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.0",
+    "parallelshell": "3.0.1",
+    "rimraf": "^3.0.2",
+    "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}

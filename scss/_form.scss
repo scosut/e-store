@@ -1,0 +1,64 @@
+.form-control,
+.custom-file-label {
+    &.flat {
+        background-color: $color-bg;
+        border: 1px solid $color-bg;
+        line-height: 1.3;
+    }
+}
+
+.custom-file-label:after {
+    display: none;
+}
+
+.custom-file-img {
+    display: block;
+    margin-top: 2px;
+    max-width: 75px;
+}
+
+.col-form-label {
+    padding: 0;
+}
+
+textarea.form-control {
+    resize: none;
+    height: 125px;
+}
+
+input.form-control,
+input.custom-file-input,
+label.custom-file-label,
+select.form-control,
+textarea.form-control {
+    &:focus,
+    &:focus~.custom-file-label {
+        background-color: #fff;
+        border-color: #1d2124;
+        box-shadow: 0 0 0 0.2rem rgba(#52585D, .5);
+    }
+}
+
+input[type=radio] {
+    margin-right: 6px;
+    position: relative;
+    visibility: hidden;
+
+    &:before {
+        content: "\f058";
+        color: $color-accent;
+        font-family: "FontAwesome";
+        font-size: 20px;
+        left: 0;
+        position: absolute;        
+        top: -8px;
+        visibility: visible;
+    }
+}
+
+a.form-link,
+a.form-link:focus,
+a.form-link:hover {
+    color: $color-accent;
+    line-height: 1.2;
+}

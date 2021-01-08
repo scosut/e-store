@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Required meta tags always come first -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- build:css css/main.css -->
+		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<!-- endbuild -->
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed" />
+		<link rel="icon" type="image/png" href="img/favicon.png" />
+
+		<title>E-Store | Product Details</title>
+	</head>
+	<body>
+		<!-- Top Navigation -->
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<div class="container">
+				<a class="navbar-brand" href="#">E-STORE</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<form class="my-2 my-md-0">
+						<div class="input-group input-group-search">
+							<input class="form-control" type="search" placeholder="Search products..." 
+							aria-label="Search">
+							<div class="input-group-append">
+								<button id="btnSearch" class="btn btn-outline-success" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+					<ul class="navbar-nav ml-auto">
+						<li id="cart" class="nav-item">
+							<a class="nav-link d-inline-block d-md-block" href="#" data-toggle="tooltip" data-placement="left" data-container="#cart" title="Subtotal (3 items): $189.97"><i class="fa fa-shopping-cart"></i> CART</a>
+						</li>
+						
+						<!-- customer not signed in options -->
+						<li id="sign-in" class="nav-item">
+							<a class="nav-link" href="sign_in.html?checkout=false"><i class="fa fa-user"></i> SIGN IN</a>
+						</li>
+					
+						<!-- customer signed in options -->
+						<li id="customer-dropdown" class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">JOHN DOE</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="profile.html?role=customer">Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="orders.html?role=customer">Orders</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="sign_in.html">Sign Out</a>
+							</div>
+						</li>						
+
+						<!-- admin signed in options -->
+						<li id="admin-dropdown" class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ADMIN</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="profile.html?role=admin">Profile</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="products.html?role=admin">Products</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="orders.html?role=admin">Orders</a>
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="sign_in.html">Sign Out</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Breadcrumb -->
+		<nav class="bg-breadcrumb" aria-label="breadcrumb">
+			<div class="container px-sm-0">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a id="breadcrumb-link" href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Product details</li>
+				</ol>
+			</div>
+		</nav>
+
+		<!-- Product Details -->
+		<div class="container mt-5">
+			<div class="row row-product">
+				<div class="col-sm-2 col-md-4 mb-5">
+					<img class="img-fluid img-shadow" src="img/airpods.jpg" />
+				</div>
+				<div class="col-sm-5 col-md-4 mb-5">
+					<div class="product">
+						<div>AIRPODS WIRELESS BLUETOOTH HEADPHONES</div>
+						<div class="divider"></div>
+						<div class="review-3">2 reviews</div>
+						<div class="divider"></div>
+						<div>Price: $89.99</div>
+						<div class="divider"></div>
+						<div>Description: Bluetooth technology lets you connect to compatible devices wirelessly. High-quality AAC audio offers immersive listening experience. Built-in microphone allows you to take calls while working.</div>
+					</div>
+				</div>
+				<div class="col-sm-5 col-md-4 mb-5">
+					<div class="summary card">
+						<div class="card-body">
+							<div>Price:</div>
+							<div>$89.99</div>
+							<div class="divider"></div>
+							<div>Status:</div>
+							<div>In Stock</div>
+							<div class="divider"></div>
+							<div>Quantity:</div>
+							<div>
+								<select id="qty" name="qty" class="form-control flat w-auto">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+								</select>
+							</div>
+							<div class="divider customer-only"></div>
+							<div class="w-100 customer-only">
+								<button class="btn btn-dark btn-block">ADD TO CART</button>
+							</div>
+						</div>
+					</div>				
+				</div>			
+			</div>
+
+			<!-- Products Reviews -->
+			<div class="row">
+				<div class="col col-review mb-5">
+					<h2>REVIEWS</h2>
+					<p>Jane Doe</p>
+					<p class="review-4"></p>
+					<p>9/27/2020</p>
+					<p class="review-text">These are great headphones!</p>
+					<div class="divider"></div>
+					
+					<p>John Doe</p>
+					<p class="review-2"></p>
+					<p>9/27/2020</p>
+					<p class="review-text">These headphones do not sound great.</p>
+					<div class="divider customer-only"></div>
+
+					<div class="customer-only">
+						<h2>WRITE A CUSTOMER REVIEW</h2>
+
+						<div class="alert alert-danger">
+							Please sign in to write a review.
+						</div>
+
+						<div class="alert alert-success">
+							You reviewed this item on 9/27/2020.
+						</div>
+
+						<form>
+							<div class="form-group">
+								<label for="rating" class="col-form-label">Rating</label>
+								<select id="rating" name="rating" class="form-control flat">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="comments" class="col-form-label">Comments</label>
+								<textarea id="comments" name="comments" class="form-control flat"></textarea>
+							</div>
+							<div>
+								<button type="submit" class="btn btn-dark">SUBMIT</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<p>Copyright &copy; <span id="footerDate"></span>. All rights reserved.</p>
+		</footer>
+
+		<!-- build:js js/main.js -->
+		<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>

@@ -1,0 +1,11 @@
+@mixin atXS {
+    @media screen and (max-width: $width-xs) {
+        @content;
+    }
+}
+  
+@mixin atSM {
+    @media screen and (min-width: $width-sm) {
+        @content;
+    }
+}

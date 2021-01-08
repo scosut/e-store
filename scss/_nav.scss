@@ -1,0 +1,56 @@
+.navbar {
+    min-height: 100px;
+}
+
+.navbar-expand-md {
+    > .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+.nav-tabs {
+    font-size: 16px;
+    justify-content: center;
+
+    .nav-link {
+        padding: 7px;
+
+        @include atSM() {
+            padding: 8px 12px;
+        }
+
+        &.disabled {
+            color: rgba(#6c757d, 0.5);
+        }
+
+        &.active {
+            color: $color-accent;
+        }
+    }
+}
+
+#cart {
+    .nav-link {
+        padding-right: 8px;
+    }
+
+    .tooltip {
+        .tooltip-inner {
+            background-color: #fff;
+            color: #212529;
+        }
+
+        &[x-placement^=left] {
+            .arrow::before {
+                border-left-color: #fff;
+            }
+        }
+
+        &[x-placement^=right] {
+            .arrow::before {
+                border-right-color: #fff;
+            }
+        }
+    }    
+}

@@ -1,0 +1,14 @@
+.page-link {
+    color: $color-accent;
+
+    &:hover {
+        background-color: $color-bg;
+        color: $color-accent;
+    }
+}
+
+.page-item.active .page-link {
+    background-color: $color-accent;
+    border-color: $color-accent;
+    color: #fff;
+}

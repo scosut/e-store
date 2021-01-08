@@ -1,0 +1,29 @@
+.carousel-caption {
+    position: static;
+
+    p {
+        letter-spacing: 2px;
+        margin: 0;
+    }
+}
+
+.carousel-image {
+    align-items: center;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    margin: auto;
+    width: 150px;
+
+    img {
+        border-radius: 50%;
+        box-shadow: 0px 0px 5px #fff;
+        height: 95%;
+        width: 95%;
+    }
+}
+
+.carousel-indicators {
+    padding: 20px 0;
+    position: static;    
+}

@@ -1,0 +1,54 @@
+.col-review {
+    font-size: 18px;
+    line-height: 1.3;
+
+    @include atXS() {
+        margin: auto;
+        max-width: 400px;
+    }
+
+    > p {
+        font-size: inherit;
+        margin: 0;
+
+        &.review-text {
+            margin-top: 20px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .divider {
+        margin: 10px 0;
+    }
+
+    .form-control {
+        max-width: 400px;
+    }
+
+    .alert {
+        max-width: 400px;
+    }
+}
+
+.col-shipping,
+.col-payment {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+        &.w-100:not(.divider):not(.alert) {
+            padding-bottom: 2px;
+        }
+
+        &:not(.alert):not(.divider):nth-child(3n-2) {
+            width: 63px;
+        }
+    }
+
+    .alert {
+        margin: 0;
+    }
+}
